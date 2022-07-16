@@ -23,8 +23,12 @@
       padding: 0 10px;
     }
 
+    .logo{
+      cursor: pointer;
+    }
+
     .links {
-      margin: auto;
+      margin-left: auto;
 
       @media only screen and (max-width: 992px) {
         position: fixed;
@@ -111,6 +115,7 @@
           }
 
           .nl_hidden_list {
+            display: none;
             margin: 0;
             padding: 0;
             position: absolute;
@@ -128,40 +133,28 @@
               top: 18px;
             }
 
+            &.active{
+              display: block;
+            }
+
             .nlh_list {
               color: black;
-              padding: 1rem;
+              
               inline-size: max-content;
+
+              a{
+                display: block;
+                color: black;
+                padding: 1rem;
+                text-decoration: none;
+              }
             }
           }
         }
       }
     }
 
-    button {
-      background-color: transparent;
-      border: none;
-      position: relative;
-
-      @media only screen and (max-width: 992px) {
-        margin-left: auto;
-        margin-right: 5.5rem;
-      }
-
-      span {
-        background-color: #0076ff;
-        border: 2px solid #131921;
-        color: var(--white-color);
-        position: absolute;
-        top: -8px;
-        right: -10px;
-        border-radius: 50px;
-        width: 25px;
-        height: 25px;
-        padding-top: 2px;
-        font-weight: 700;
-      }
-    }
+    
 
     .hamburger {
       z-index: 99;

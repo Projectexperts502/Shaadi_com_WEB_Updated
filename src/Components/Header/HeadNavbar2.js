@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import logo from "../../assets/shaadi-logo.png";
+import { Link } from 'react-router-dom'
 import styles from "../Header/HeadNavbar2/HeadNavbar2.module.css";
 
 function HeadNavbar2() {
@@ -20,10 +21,26 @@ function HeadNavbar2() {
 
   window.addEventListener("scroll", navBarBg);
 
-  const [activeNavTab, setActiveNavTab] = useState(0);
+  const [activeTabShaadi, setActiveTabShaadi] = useState(false);
+  const [activeTabMatches, setActiveTabMatches] = useState(false);
+  const [activeTabInbox, setActiveTabInbox] = useState(false);
 
-  const handleActiveNavTab = (tab) => {
-    setActiveNavTab(tab);
+  const handleActiveTabShaadi = () => {
+    setActiveTabShaadi(!activeTabShaadi);
+    setActiveTabMatches(false);
+    setActiveTabInbox(false);
+  };
+
+  const handleActiveTabMatches = () => {
+    setActiveTabShaadi(false);
+    setActiveTabMatches(!activeTabMatches);
+    setActiveTabInbox(false);
+  };
+
+  const handleActiveTabInbox = () => {
+    setActiveTabShaadi(false);
+    setActiveTabMatches(false);
+    setActiveTabInbox(!activeTabInbox);
   };
 
   return (
@@ -34,7 +51,7 @@ function HeadNavbar2() {
           <div className={styles.inner}>
             {/* LOGO */}
             <div className={styles.logo}>
-              <img src={logo} alt="logo" />
+              <Link to={"/"}><img src={logo} alt="logo" /></Link>
             </div>
 
             <div
@@ -52,51 +69,58 @@ function HeadNavbar2() {
               >
                 <li
                   className={
-                    activeNavTab === 1
+                    activeTabShaadi
                       ? `${styles.nl_list} ${styles.active}`
                       : `${styles.nl_list}`
                   }
-                  onClick={() => handleActiveNavTab(1)}
+                onClick={()=> handleActiveTabShaadi()}
                 >
                   My Shaadi
-                  {activeNavTab === 1 && (
-                    <>
-                      <ul className={styles.nl_hidden_list}>
-                        <li className={styles.nlh_list}>New Matches</li>
-                        <li className={styles.nlh_list}>New Matches</li>
-                        <li className={styles.nlh_list}>New Matches</li>
+                      <ul className={activeTabShaadi
+                      ? `${styles.nl_hidden_list} ${styles.active}`
+                      : `${styles.nl_hidden_list}`}>
+                        <li className={styles.nlh_list}><Link to={"/dashboard"}>Dashboard</Link></li>
+                        <li className={styles.nlh_list}><Link to={"/link-2"}>Link 2</Link></li>
                       </ul>
-                    </>
-                  )}
                 </li>
                 <li
                   className={
-                    activeNavTab === 2
+                    activeTabMatches
                       ? `${styles.nl_list} ${styles.active}`
                       : `${styles.nl_list}`
                   }
-                  onClick={() => handleActiveNavTab(2)}
+                  onClick={() => handleActiveTabMatches()}
                 >
                   Matches
-                  {activeNavTab === 2 && (
-                    <>
-                      <ul className={styles.nl_hidden_list}>
-                        <li className={styles.nlh_list}>New Matches</li>
-                        <li className={styles.nlh_list}>New Matches</li>
-                        <li className={styles.nlh_list}>New Matches</li>
+                  <ul className={activeTabMatches
+                      ? `${styles.nl_hidden_list} ${styles.active}`
+                      : `${styles.nl_hidden_list}`}>
+                        <li className={styles.nlh_list}><Link to={"/today-recommendation"}>Today's Matches</Link></li>
+                        <li className={styles.nlh_list}><Link to={"/partners"}>My-Matches</Link></li>
+                        <li className={styles.nlh_list}><Link to={"/near-me"}>Near Me</Link></li>
+                        <li className={styles.nlh_list}><Link to={"/viewed"}>Recently Viewed</Link></li>
                       </ul>
-                    </>
-                  )}
                 </li>
-                <li className={styles.nl_list}>Search</li>
-                <li className={styles.nl_list}>Inbox</li>
+                <li
+                  className={
+                    activeTabInbox
+                      ? `${styles.nl_list} ${styles.active}`
+                      : `${styles.nl_list}`
+                  }
+                  onClick={() => handleActiveTabInbox()}
+                >
+                  Inbox
+                  <ul className={activeTabInbox
+                      ? `${styles.nl_hidden_list} ${styles.active}`
+                      : `${styles.nl_hidden_list}`}>
+                        <li className={styles.nlh_list}><Link to={"/link-1"}>Link 1</Link></li>
+                        <li className={styles.nlh_list}><Link to={"/link-2"}>Link 2</Link></li>
+                      </ul>
+                </li>
               </ul>
             </div>
 
-            {/* BUTTON */}
-            <button>
-              <img src={logo} alt="cart-icon" />
-            </button>
+            
 
             {/* HAMBURGER */}
             <div class={styles.hamburger} onClick={() => setOpenNav(!openNav)}>

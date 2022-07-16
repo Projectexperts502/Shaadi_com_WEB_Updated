@@ -1,5 +1,5 @@
 .my_matches_page{
-  padding: 9rem 0 3rem !important;
+  padding: 6rem 0 3rem !important;
 }
 .mymatches_page_container {
   display: flex;
@@ -12,12 +12,12 @@
   padding-right: 4px;
 }
 .mymatches_page_center_container {
-  width: 66%;
+  width: 69%;
   padding-left: 4px;
   padding-right: 4px;
 }
 .mymatches_page_right_container {
-  width: 17%;
+  width: 14%;
   padding-left: 4px;
   padding-right: 4px;
 }
