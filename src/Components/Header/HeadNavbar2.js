@@ -79,7 +79,7 @@ function HeadNavbar2() {
                       <ul className={activeTabShaadi
                       ? `${styles.nl_hidden_list} ${styles.active}`
                       : `${styles.nl_hidden_list}`}>
-                        <li className={styles.nlh_list}><Link to={"/dashboard"}>Dashboard</Link></li>
+                        <li className={styles.nlh_list}><Link to={"/dashboard2"}>Dashboard</Link></li>
                         <li className={styles.nlh_list}><Link to={"/link-2"}>Link 2</Link></li>
                       </ul>
                 </li>

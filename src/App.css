@@ -1,5 +1,6 @@
 /* For bootstrap and reactstrap */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* ------------------------------ */
 
@@ -26,6 +27,8 @@ body {
   --color-dark: #141414;
 
   --color-green_light: #89C965;
+
+  --ff-poppins: 'Poppins', sans-serif;
 }
 
 .container_border {

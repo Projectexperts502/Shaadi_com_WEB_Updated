@@ -10,6 +10,7 @@ import NearMe from "../Pages/Matches/NearMe/NearMe";
 import RecentlyViewed from "../Pages/Matches/RecentlyViewed/RecentlyViewed";
 import MoreMatches from "../Pages/Matches/MoreMatches/MoreMatches";
 import Dashboard from "../Pages/MyShadi/Dashboard/Dashboard";
+import Dashboard2 from "../Pages/MyShadi/Dashboard2";
 
 export const routes = [
   { path: "/", Component: HomePage },
@@ -23,6 +24,7 @@ export const routes = [
   { path: "/viewed", Component: RecentlyViewed },
   { path: "/more-matches", Component: MoreMatches },
   { path: "/dashboard", Component: Dashboard },
+  { path: "/dashboard2", Component: Dashboard2 },
 ]
 
 
