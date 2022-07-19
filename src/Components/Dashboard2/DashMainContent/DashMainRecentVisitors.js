@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/Dashboard2/Dashboard2.module.css";
+import DashRecentVisitorsCard from "./DashRecentVisitorsCard";
 
 function DashMainRecentVisitors() {
   return (
@@ -12,15 +13,14 @@ function DashMainRecentVisitors() {
 
         <div className="row">
           <div className="col-lg-4">
-            {/* <div className={styles.dmv_card}>
-              <div className={styles.dmvc_online}>
-                Online <span></span>
-              </div>
-            </div> */}
-            Card 1
+            <DashRecentVisitorsCard />
           </div>
-          <div className="col-lg-4">Card 2</div>
-          <div className="col-lg-4">Card 3</div>
+          <div className="col-lg-4">
+            <DashRecentVisitorsCard />
+          </div>
+          <div className="col-lg-4">
+            <DashRecentVisitorsCard />
+          </div>
         </div>
       </div>
     </>

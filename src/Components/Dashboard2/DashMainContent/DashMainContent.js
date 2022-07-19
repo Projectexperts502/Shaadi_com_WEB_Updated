@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../../../styles/Dashboard2/Dashboard2.module.css';
+import DashMainMatches from './DashMainMatches';
 import DashMainProfile from './DashMainProfile';
 import DashMainRecentVisitors from './DashMainRecentVisitors';
 
@@ -11,6 +12,8 @@ function DashMainContent() {
         <DashMainProfile/>
 
         <DashMainRecentVisitors/>
+
+        <DashMainMatches/>
         </div>
     </>
   )

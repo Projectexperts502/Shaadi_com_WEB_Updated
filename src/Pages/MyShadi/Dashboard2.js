@@ -11,14 +11,14 @@ function Dashboard2() {
 
       <div className={styles.dashboard}>
         <div className="row">
-          <div className="col-lg-3">
+          <div className={`${styles.column_3} col-lg-3`}>
             <DashNotifications />
           </div>
-          <div className="col-lg-6">
-            <DashMainContent/>
+          <div className={`${styles.column_6} col-lg-3`}>
+            <DashMainContent />
           </div>
-          <div className="col-lg-3">
-            <div className={styles.d_blank_box} style={{height: "467px"}}>
+          <div className={`${styles.column_3} col-lg-3`}>
+            <div className={styles.d_blank_box} style={{ height: "467px" }}>
               {/* BOX */}
             </div>
           </div>
