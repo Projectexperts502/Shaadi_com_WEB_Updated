@@ -10,19 +10,23 @@ function Dashboard2() {
       <Header isProfile={true} disabled={true} />
 
       <div className={styles.dashboard}>
-        <div className="row">
-          <div className={`${styles.column_3} col-lg-3`}>
-            <DashNotifications />
-          </div>
-          <div className={`${styles.column_6} col-lg-3`}>
-            <DashMainContent />
-          </div>
-          <div className={`${styles.column_3} col-lg-3`}>
-            <div className={styles.d_blank_box} style={{ height: "467px" }}>
-              {/* BOX */}
+        <div className="container-fluid">
+          <div className="row">
+            <div className={`${styles.column_3}`}>
+              {/* <DashNotifications /> */}
             </div>
+            <div className={`${styles.column_6} col-lg-4 col-sm-12`}>
+              <DashMainContent />
+            </div>
+            
+            {/* <div className={`${styles.column_3} col-lg-4`}>
+              <div className={styles.d_blank_box} style={{ height: "467px" }}>
+                {/* BOX 
+              </div>
+            </div> */}
           </div>
         </div>
+        
       </div>
 
       <Footer />

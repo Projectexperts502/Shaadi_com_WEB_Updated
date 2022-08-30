@@ -9,16 +9,16 @@ function DashRecentVisitorsCard() {
   return (
     <>
         <div className={styles.dmv_card}>
-              <div className={styles.dmvc_online}>
-                Online <span></span>
-              </div>
+              {/* <div className={styles.dmvc_online}>
+                Online 
+              </div> */}
 
               <div className={styles.dmvc_profile_img}>
                 <img src={user_profile_img} alt="profile-img" />
               </div>
 
               <div className={styles.dmvc_user_details}>
-                <h1>Sara</h1>
+                <h1>Sara<b className='text-success'>.</b></h1>
                 <ul className={styles.dmvcu_detail_list}>
                   <li>Single</li>
                   <li>Digital Artist</li>

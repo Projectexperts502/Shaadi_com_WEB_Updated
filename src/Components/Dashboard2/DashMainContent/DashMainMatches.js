@@ -8,7 +8,8 @@ function DashMainMatches() {
   return (
     <>
       <div className={styles.dm_matches}>
-        <div className="row">
+        <div className={styles.scrollStyle}>
+          <div className={`${styles.dmm_row} row`}>
           <div className="col-lg-6">
             <div className={styles.dmm_card}>
               <div className={styles.dmmc_header}>
@@ -17,6 +18,52 @@ function DashMainMatches() {
               </div>
 
               <div className={styles.dmmc_items_holder}>
+                <div className={styles.dmmc_item}>
+                  <div className={styles.dmmci_profile_details}>
+                    <div className={styles.dmmci_profile_img}>
+                      <img src={user_profile_img} alt="profile-img" />
+                    </div>
+
+                    <div className={styles.dmmcip_details}>
+                      <h1>Alisa</h1>
+                      <div>
+                        25 yrs, <span>5’ 8’’</span>
+                      </div>
+                      <div>Newyork, USA</div>
+                    </div>
+                  </div>
+
+                  <div className={styles.dmmci_connect_now}>
+                    <div className={styles.dmmci_ring_img}>
+                      <img src={ring_icon} alt="ring-img" />
+                    </div>
+                    <button>Connect Now</button>
+                  </div>
+                </div>
+
+                <div className={styles.dmmc_item}>
+                  <div className={styles.dmmci_profile_details}>
+                    <div className={styles.dmmci_profile_img}>
+                      <img src={user_profile_img} alt="profile-img" />
+                    </div>
+
+                    <div className={styles.dmmcip_details}>
+                      <h1>Alisa</h1>
+                      <div>
+                        25 yrs, <span>5’ 8’’</span>
+                      </div>
+                      <div>Newyork, USA</div>
+                    </div>
+                  </div>
+
+                  <div className={styles.dmmci_connect_now}>
+                    <div className={styles.dmmci_ring_img}>
+                      <img src={ring_icon} alt="ring-img" />
+                    </div>
+                    <button>Connect Now</button>
+                  </div>
+                </div>
+
                 <div className={styles.dmmc_item}>
                   <div className={styles.dmmci_profile_details}>
                     <div className={styles.dmmci_profile_img}>
@@ -149,6 +196,56 @@ function DashMainMatches() {
                     <button>Connect Now</button>
                   </div>
                 </div>
+                <div className={styles.dmmc_item}>
+                  <div className={styles.dmmci_profile_details}>
+                    <div className={styles.dmmci_profile_img}>
+                      <img src={user_profile_img} alt="profile-img" />
+                    </div>
+
+                    <div className={styles.dmmcip_details}>
+                      <h1>Alisa</h1>
+                      <div>
+                        25 yrs, <span>5’ 8’’</span>
+                      </div>
+                      <div>Newyork, USA</div>
+                    </div>
+                  </div>
+
+                  <div className={styles.dmmci_connect_now}>
+                  <div className={styles.dmmci_diamond_icon}>
+                    <img src={diamond_icon} alt="diamond-icon"/>
+                  </div>
+                    <div className={styles.dmmci_ring_img}>
+                      <img src={ring_icon} alt="ring-img" />
+                    </div>
+                    <button>Connect Now</button>
+                  </div>
+                </div>
+                <div className={styles.dmmc_item}>
+                  <div className={styles.dmmci_profile_details}>
+                    <div className={styles.dmmci_profile_img}>
+                      <img src={user_profile_img} alt="profile-img" />
+                    </div>
+
+                    <div className={styles.dmmcip_details}>
+                      <h1>Alisa</h1>
+                      <div>
+                        25 yrs, <span>5’ 8’’</span>
+                      </div>
+                      <div>Newyork, USA</div>
+                    </div>
+                  </div>
+
+                  <div className={styles.dmmci_connect_now}>
+                  <div className={styles.dmmci_diamond_icon}>
+                    <img src={diamond_icon} alt="diamond-icon"/>
+                  </div>
+                    <div className={styles.dmmci_ring_img}>
+                      <img src={ring_icon} alt="ring-img" />
+                    </div>
+                    <button>Connect Now</button>
+                  </div>
+                </div>
 
                 <div className={styles.dmmc_item}>
                   <div className={styles.dmmci_profile_details}>
@@ -233,6 +330,7 @@ function DashMainMatches() {
                 <button>View More</button>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
